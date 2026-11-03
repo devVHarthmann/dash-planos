@@ -1,0 +1,318 @@
+.dashboard {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  color: #173a2e;
+}
+
+.dashboard-heading {
+  margin-bottom: 27px;
+}
+
+.dashboard-eyebrow,
+.journey-kicker {
+  display: block;
+  color: #38785d;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+}
+
+.dashboard-heading h1 {
+  margin: 9px 0 7px;
+  color: #053527;
+  font-size: clamp(26px, 4vw, 34px);
+  font-weight: 650;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+.dashboard-heading p {
+  margin: 0;
+  color: #63766b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.plan-card {
+  position: relative;
+  display: flex;
+  min-height: 194px;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 30px 38px;
+  border: 1px solid rgb(194 162 93 / 24%);
+  border-radius: 16px;
+  background:
+    radial-gradient(ellipse at 98% 0%, rgb(194 162 93 / 19%), transparent 48%),
+    linear-gradient(110deg, #fff 0%, #fffdf8 64%, #f5ecd4 100%);
+  box-shadow: 0 8px 26px rgb(5 53 39 / 5%);
+}
+
+.plan-card-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.plan-card-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #63766b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.plan-card-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c2a25d;
+  box-shadow: 0 0 0 4px rgb(194 162 93 / 14%);
+}
+
+.plan-card h2 {
+  margin: 14px 0 6px;
+  color: #053527;
+  font-size: clamp(21px, 3vw, 26px);
+  font-weight: 650;
+  letter-spacing: -0.025em;
+}
+
+.plan-card p {
+  max-width: 440px;
+  margin: 0;
+  color: #68786e;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.plan-card-art {
+  display: grid;
+  width: 116px;
+  height: 116px;
+  flex: 0 0 auto;
+  place-items: center;
+  margin-right: 28px;
+  border-radius: 50%;
+  background: rgb(237 222 181 / 55%);
+}
+
+.plan-card-art svg {
+  width: 82px;
+  height: 82px;
+  fill: none;
+  stroke: #38785d;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+}
+
+.plan-card-art circle {
+  fill: rgb(255 255 255 / 54%);
+  stroke: #c2a25d;
+  stroke-width: 2;
+}
+
+.journey-card {
+  margin-top: 24px;
+  padding: 27px 0 16px;
+}
+
+.journey-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.journey-heading h2 {
+  margin: 0;
+  color: #053527;
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.journey-heading p {
+  margin: 6px 0 0;
+  color: #718077;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.journey-count {
+  flex: 0 0 auto;
+  color: #38785d;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.journey-steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(var(--step-count), minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.journey-steps::before {
+  position: absolute;
+  top: 7px;
+  right: calc(50% / var(--step-count));
+  left: calc(50% / var(--step-count));
+  height: 1px;
+  background: #d8d8ca;
+  content: '';
+}
+
+.journey-step {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 12px;
+  text-align: center;
+}
+
+.journey-step--complete .journey-step-marker {
+  background: #38785d;
+  color: #fff;
+}
+
+.journey-step-marker {
+  display: grid;
+  width: 15px;
+  height: 15px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: #e5e3d8;
+  color: transparent;
+}
+
+.journey-step--current .journey-step-marker {
+  background: #c2a25d;
+  box-shadow: 0 0 0 4px #eddeb5;
+}
+
+.journey-step-marker svg {
+  width: 11px;
+  height: 11px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.journey-step-copy {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+  margin-top: 15px;
+}
+
+.journey-step-title {
+  color: #67766c;
+  font-size: 13px;
+  font-weight: 550;
+  line-height: 1.4;
+}
+
+.journey-step--current .journey-step-title,
+.journey-step--complete .journey-step-title {
+  color: #053527;
+  font-weight: 650;
+}
+
+.journey-step-description {
+  max-width: 190px;
+  color: #7a867e;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.journey-step-status {
+  margin-top: 9px;
+  color: #826b39;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+@media (max-width: 620px) {
+  .plan-card {
+    min-height: 172px;
+    padding: 25px 22px;
+  }
+
+  .plan-card-art {
+    width: 82px;
+    height: 82px;
+    margin-right: 0;
+    margin-left: 12px;
+  }
+
+  .plan-card-art svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .journey-heading {
+    margin-bottom: 22px;
+  }
+
+  .journey-steps {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .journey-steps::before {
+    top: 7px;
+    bottom: 7px;
+    left: 7px;
+    width: 1px;
+    height: auto;
+  }
+
+  .journey-step {
+    min-height: 78px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 0 0 20px;
+    text-align: left;
+  }
+
+  .journey-step-marker {
+    margin-top: 1px;
+  }
+
+  .journey-step-copy {
+    margin-top: 0;
+  }
+
+  .journey-step-description {
+    max-width: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .journey-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .plan-card-art {
+    width: 64px;
+    height: 64px;
+  }
+
+  .plan-card-art svg {
+    width: 48px;
+    height: 48px;
+  }
+}
